@@ -27,19 +27,23 @@ a:hover{
 
 .navbar{
    width: 100vw;
+
     background-color: rgb(5, 32, 57);
 }
 
 .main{
     width: 100%;
+  
 }
 .routes{
     padding: 20px;
+    width: 100vw;
 }
 .nav-container{
     position: sticky;
     top: 0;
     margin: 10px;
+    margin-right: -30px;
     /* height: 100vh; */
     margin: 0px;
     background-color: rgb(3, 24, 44);
@@ -78,23 +82,23 @@ a:hover{
     align-items: center;
 }
 
-@media screen and (max-width:1300px){
+/* @media screen and (max-width:1300px){
     .main{
         margin-left: 50px;
     }
-}
+} */
 
-@media screen and (max-width:1170px){
+/* @media screen and (max-width:1170px){
     .main{
         margin-left: 50px;
     }
-}
+} */
 
-@media screen and (max-width:1000px){
+/* @media screen and (max-width:1000px){
     .main{
         margin-left: 100px;
     }
-}
+} */
 
 @media screen and (max-width:800px){
     .app{
@@ -381,3 +385,24 @@ width: 70%;
     padding: 20px;
     align-items: center;
 }
+
+.login-input{
+    margin: 10px;
+}
+.box {
+    border: 1px solid #dfdfdf;
+    background-color: #fff;
+    width: 300px;
+  }
+
+  .g-btn {
+    width: 90% !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    font-size: 15px !important;
+  }
+  .g-btn > div,
+  .g-btn > div > svg {
+    width: 40px !important;
+    height: 38px !important;
+  }

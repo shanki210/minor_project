@@ -10,13 +10,13 @@ const Navbar = () => {
         <div className='logo-container'>
             <Avatar src={icon} size="medium"/>
             <Typography.Title level={3} className='logo'>
-                <Link to="/">Cryptoverse</Link>
+                <Link to="/">DigiCoin</Link>
             </Typography.Title>   
-        </div>
+        </div> 
         
           <Menu theme='dark' mode="horizontal">
                   <Menu.Item icon={<HomeOutlined/>}>
-                    <Link to="/"> Home</Link>
+                    <Link to="/home"> Home</Link>
                   </Menu.Item>
                   <Menu.Item icon={<FundOutlined/>}>
                     <Link to="/cryptocurrencies">Cryptocurrencies</Link>

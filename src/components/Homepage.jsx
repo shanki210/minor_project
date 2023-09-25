@@ -5,11 +5,30 @@ import { Link } from 'react-router-dom'
 import News from './News'
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import Cryptocurrencies from './Cryptocurrencies';
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router";
+import { useUserAuth } from "../context/UserAuthContext";
+
 
 const {Title} = Typography;
 
 
 const Homepage = () => {
+
+
+
+  const { logOut, user } = useUserAuth();
+  const navigate = useNavigate();
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+
 
   const {data,isFetching} = useGetCryptosQuery(10);
   console.log(data);
@@ -29,6 +48,9 @@ const Homepage = () => {
         <Col span={12}><Statistic title="Total Markets" value={millify(globalStats.totalMarkets)}/></Col>
       </Row> */}
       <div className='home-heading-container'>
+      <Button variant="primary" onClick={handleLogout}>
+          Log out
+        </Button>
         <Title level={2} className='home-title'>Top 10 Cryptocurrencies in the world</Title>
         <Title level={3} className='show-more'><Link to="/cryptocurrencies">Show More</Link></Title>
       </div>

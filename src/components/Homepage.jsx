@@ -8,6 +8,7 @@ import Cryptocurrencies from './Cryptocurrencies';
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
+import "../components/Login.css"
 
 
 const {Title} = Typography;
@@ -48,9 +49,15 @@ const Homepage = () => {
         <Col span={12}><Statistic title="Total Markets" value={millify(globalStats.totalMarkets)}/></Col>
       </Row> */}
       <div className='home-heading-container'>
-      <Button variant="primary" onClick={handleLogout}>
-          Log out
-        </Button>
+    
+
+       
+      <Button className="logout-button" variant="primary" onClick={handleLogout}>
+        Log out
+      </Button>
+   
+      
+      
         <Title level={2} className='home-title'>Top 10 Cryptocurrencies in the world</Title>
         <Title level={3} className='show-more'><Link to="/cryptocurrencies">Show More</Link></Title>
       </div>

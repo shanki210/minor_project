@@ -99,7 +99,7 @@ a:hover{
         margin-left: 100px;
     }
 } */
-
+/* 
 @media screen and (max-width:800px){
     .app{
         flex-direction: column;
@@ -139,7 +139,7 @@ a:hover{
     .show-more{
         font-size: 1.3rem !important;
     }
-}
+} */
 
 .coin-detail-container{
     margin: 30px;
@@ -406,3 +406,14 @@ width: 70%;
     width: 40px !important;
     height: 38px !important;
   }
+
+
+  .positive-change {
+    color: green;
+  }
+  
+  .negative-change {
+    color: red;
+  }
+
+  

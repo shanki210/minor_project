@@ -31,12 +31,12 @@ const App = () => {
                               </ProtectedRoute>
                         }>    
                         </Route>
-                        <Route exact path="/exchanges" element={
+                        {/* <Route exact path="/exchanges" element={
                              <ProtectedRoute>
                                    <Exchanges/>
                              </ProtectedRoute>
                         }>   
-                        </Route>
+                        </Route> */}
                         <Route exact path="/cryptocurrencies" element={ 
                             <ProtectedRoute>
                                 <Cryptocurrencies/>
@@ -67,8 +67,8 @@ const App = () => {
                     All right reserved
                 </Typography.Title>
                 <Space>
-                    <Link to="/">Home</Link>
-                    <Link to="/exchanges">Exchanges</Link>
+                    <Link to="/home">Home</Link>
+                    <Link to="/cryptocurrencies">Cryptocurrencies</Link>
                     <Link to="/news">News</Link>
                 </Space>
             </div>

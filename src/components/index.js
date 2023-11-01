@@ -7,3 +7,5 @@ export {default as News} from './News';
 export {default as Login} from './Login';
 export {default as Signup} from './Signup';
 export {default as ProtectedRoute} from './ProtectedRoute';
+export {default as CoinsTable} from './CoinsTable';
+export {default as CoinPage} from './CoinPage';

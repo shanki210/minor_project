@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route,Link, Routes} from 'react-router-dom';
 import {Layout,Typography,Space} from 'antd';
-import {Navbar,Exchanges,Homepage,Cryptocurrencies,CryptoDetails,News,Login,Signup,ProtectedRoute} from './components';
+import {Navbar,Exchanges,Homepage,Cryptocurrencies,CryptoDetails,News,Login,Signup,ProtectedRoute,CoinsTable,CoinPage} from './components';
 import './App.css'
 import { UserAuthContextProvider } from './context/UserAuthContext';
 
@@ -37,15 +37,22 @@ const App = () => {
                              </ProtectedRoute>
                         }>   
                         </Route> */}
+
                         <Route exact path="/cryptocurrencies" element={ 
                             <ProtectedRoute>
                                 <Cryptocurrencies/>
                             </ProtectedRoute>
                         }> 
                         </Route>
-                        <Route exact path="/crypto/:coinId" element={
+                        <Route exact path="/coins/:id" element={
                             <ProtectedRoute>
-                                <CryptoDetails/>
+                                <CoinPage/>
+                            </ProtectedRoute>
+                        }> 
+                        </Route>
+                        <Route exact path="/coinstable" element={
+                            <ProtectedRoute>
+                                <CoinsTable/>
                             </ProtectedRoute>
                         }> 
                         </Route>

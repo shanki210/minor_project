@@ -63,7 +63,7 @@ const CoinInfo = ({ coin }) => {
 
   return (
     <ThemeProvider theme={darkTheme}>
-      <div className="container">
+      <div className="containers">
         {!historicData | flag===false ? (
           <CircularProgress
             style={{ color: "gold" }}

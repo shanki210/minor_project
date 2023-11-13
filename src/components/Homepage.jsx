@@ -9,6 +9,7 @@ import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/UserAuthContext";
 import "../components/Login.css"
+import UserSidebar from './UserSidebar'
 
 
 const {Title} = Typography;
@@ -52,9 +53,10 @@ const Homepage = () => {
     
 
        
-      <Button className="logout-button" variant="primary" onClick={handleLogout}>
+      {/* <Button className="logout-button" variant="primary" onClick={handleLogout}>
         Log out
-      </Button>
+      </Button> */}
+      <UserSidebar/>
    
       
       

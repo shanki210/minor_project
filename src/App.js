@@ -4,6 +4,7 @@ import {Layout,Typography,Space} from 'antd';
 import {Navbar,Exchanges,Homepage,Cryptocurrencies,CryptoDetails,News,Login,Signup,ProtectedRoute,CoinsTable,CoinPage} from './components';
 import './App.css'
 import { UserAuthContextProvider } from './context/UserAuthContext';
+import Alert from './components/Alert';
 
 
 
@@ -67,6 +68,7 @@ const App = () => {
                     
                 </div>
              </Layout> 
+             {/* <Alert/> */}
         
             <div className='footer' >
                 <Typography.Title level={5} style={{color:'white',textAlign:'center'}}>

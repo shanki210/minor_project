@@ -3,6 +3,7 @@ import {Button,Menu,Typography,Avatar} from 'antd';
 import { Link } from 'react-router-dom';
 import { HomeOutlined,MoneyCollectOutlined,BulbOutlined,FundOutlined,MenuOutlined } from '@ant-design/icons';
 import icon from '../images/cryptocurrency.png'
+import UserSidebar from './UserSidebar';
 
 const Navbar = () => {
   return (
@@ -30,7 +31,8 @@ const Navbar = () => {
                     <Link to="/news">News</Link>
                   </Menu.Item>
           </Menu>
-        
+          
+          {/* <UserSidebar/> */}
         
     </div>
   )

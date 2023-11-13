@@ -19,14 +19,14 @@ import {
 import axios from "axios";
 import { CoinList } from "./config/api";
 import { useNavigate } from "react-router-dom";
+import { useUserAuth } from "../context/UserAuthContext.js";
 
 export function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 export default function CoinsTable() {
-  const [coins, setCoins] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const {coins,loading,fetchCoins} = useUserAuth();
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
 
@@ -58,15 +58,6 @@ export default function CoinsTable() {
       mode: "dark",
     },
   });
-
-  const fetchCoins = async () => {
-    setLoading(true);
-    const { data } = await axios.get(CoinList("usd"));
-    console.log(data);
-
-    setCoins(data);
-    setLoading(false);
-  };
 
   useEffect(() => {
     fetchCoins();
